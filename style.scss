@@ -1,0 +1,116 @@
+@import 'conf';
+
+body {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin: 3em;
+
+
+    main {
+        @include menu-fix;
+        text-align: center;
+
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        button {
+            @include blackButton;
+        }
+
+        button:active {
+            background-color: grey;
+        }
+
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 3em;
+
+        .box {
+            @include box;
+
+            li {
+                list-style-type: none;
+            }
+
+            .box-picture {
+                @include box-picture;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 90%);
+                    z-index: 1;
+                }
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 8px;
+                    filter: grayscale(100%);
+                }
+            }
+
+            .box-content {
+                @include box-content;
+
+
+
+                .box-title {
+                    @include box-title;
+                    z-index: 2;
+                }
+
+                .icon {
+                    height: 1em;
+                }
+
+                .content-items {
+                    display: flex;
+                    align-items: center;
+
+
+                    .adress {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+
+            }
+
+        }
+
+        .adding-box {
+            @include box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: none;
+            border: 1px dashed rgba(0, 0, 0, 0.16);
+            cursor: pointer;
+
+            #userPlus {
+                color: rgba(0, 0, 0, 0.16);
+                width: 282px;
+                height: 40px;
+
+            }
+        }
+
+    }
+}
