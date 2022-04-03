@@ -25598,10 +25598,7 @@ exports.default = ZoomOut;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "User", ()=>User
-) // export function displayUsers(users) {
- //     return fullName();
- // }
-;
+);
 class User {
     constructor(picture, firstName, lastName, age, streetNumber, streetName, postcode, city, email){
         this.picture = picture;

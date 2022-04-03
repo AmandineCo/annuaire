@@ -25,7 +25,3 @@ export class User {
     }
 
 }
-
-// export function displayUsers(users) {
-//     return fullName();
-// }
